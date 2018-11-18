@@ -1,4 +1,4 @@
-// -*- coding: utf-8 -*-
+// Hey Emacs, this is -*- coding: utf-8 -*-
 
 import * as createGraphqlRouter from '@arangodb/foxx/graphql';
 
@@ -11,7 +11,7 @@ const router = createGraphqlRouter({
   graphiql: true,
   graphql: graphql,
 }).summary('GraphQL Endpoint')
-  .description('GraphQL endpoint for ArangoDB Foxx ' +
-               'Graphql demo using TypeScript and Apollo.');
+  .description('GraphQL endpoint demo for ArangoDB Foxx ' +
+               'implemented using TypeScript and Apollo.');
 
 module.context.use(router);

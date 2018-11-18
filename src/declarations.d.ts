@@ -1,4 +1,4 @@
-// -*- coding: utf-8 -*-
+// Hey Emacs, this is -*- coding: utf-8 -*-
 
 declare module '@arangodb';
 declare module '@arangodb/*';

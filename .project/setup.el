@@ -1,4 +1,4 @@
-;; -*- coding: utf-8 -*-
+;; Hey Emacs, this is -*- coding: utf-8 -*-
 
 (set (make-local-variable 'tide-tsserver-executable)
      (concat (rh-project-get-root) "node_modules/.bin/tsserver"))
