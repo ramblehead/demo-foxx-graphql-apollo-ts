@@ -1,0 +1,16 @@
+{
+  "name": "artizanya-land",
+  "version": "0.0.0",
+  "description": "The Land of Artizanya",
+  "engines": {
+    "arangodb": "^3.3.0"
+  },
+  "author": "ramblehead",
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "scripts": {
+    "setup": "scripts/setup.js",
+    "teardown": "scripts/teardown.js"
+  },
+  "tests": "test/**/*.js"
+}

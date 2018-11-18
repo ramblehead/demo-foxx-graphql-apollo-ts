@@ -1,0 +1,27 @@
+{
+  "name": "demo-foxx-graphql-apollo-ts",
+  "version": "0.0.0",
+  "description": "ArangoDB Foxx Graphql demo using TypeScript and Apollo",
+  "author": "ramblehead",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramblehead/demo-foxx-graphql-apollo-ts.git"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "test": "echo \"Error: no test specified yet\" && exit 1"
+  },
+  "dependencies": {
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.0.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.13.1",
+    "@types/joi": "^9.0.32",
+    "@types/node": "^6.0.45",
+    "typescript": "^2.7.2",
+    "tslint": "^5.10.0"
+  }
+}

@@ -1,0 +1,115 @@
+# Hey Emacs, this is -*- coding: utf-8 -*-
+
+"Species of a character: human or droid."
+enum Species {
+  "A humanoid creature in the Star Wars universe."
+  HUMAN
+
+  "A mechanical creature in the Star Wars universe."
+  DROID
+}
+
+"An episode in the Star Wars Trilogy."
+type Episode {
+  "The id of the episode."
+  id: String!
+
+  "The title of the episode."
+  title: String
+
+  "The description of the episode."
+  description: String
+}
+
+"A character in the Star Wars Trilogy"
+interface Character {
+  "The id of the character."
+  id: String!
+
+  "The species of the character."
+  species: String!
+
+  "The name of the character."
+  name: String
+
+  "The friends of the character, or an empty list if they have none."
+  friends(
+    "The species of the friends."
+    species: Species
+  ): [Character]!
+
+  "Which movies they appear in."
+  appearsIn: [Episode]
+}
+
+"A humanoid creature in the Star Wars universe."
+type Human implements Character {
+  "The id of the human."
+  id: String!
+
+  "The species of the human."
+  species: String!
+
+  "The name of the human."
+  name: String
+
+  "The friends of the human, or an empty list if they have none."
+  friends(
+    "The species of the friends."
+    species: Species
+  ): [Character]!
+
+  "Which movies they appear in."
+  appearsIn: [Episode]!
+
+  "The home planet of the human, or null if unknown."
+  homePlanet: String
+}
+
+"A mechanical creature in the Star Wars universe."
+type Droid implements Character {
+  "The id of the droid."
+  id: String!
+
+  "The species of the droid."
+  species: String!
+
+  "The name of the droid."
+  name: String
+
+  "The friends of the droid, or an empty list if they have none."
+  friends(
+    "The species of the friends."
+    species: Species
+  ): [Character]!
+
+  "Which movies they appear in."
+  appearsIn: [Episode]!
+
+  "The primary function of the droid."
+  primaryFunction: String
+}
+
+type Query {
+  hero(
+    """
+    If omitted, returns the hero of the whole saga.
+    If provided, returns the hero of that particular episode.
+    """
+    episode: String
+  ): Character
+
+  human(
+    "ID of the human."
+    id: String!
+  ): Human
+
+  droid(
+    "ID of the droid."
+    id: String!
+  ): Droid
+}
+
+schema {
+  query: Query
+}
