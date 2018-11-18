@@ -1,2 +1,2 @@
-# demo-graphql-foxx-apollo-ts
+# demo-foxx-graphql-apollo-ts
 ArangoDB Foxx Graphql demo using TypeScript and Apollo
