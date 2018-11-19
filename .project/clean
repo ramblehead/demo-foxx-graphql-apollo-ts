@@ -4,12 +4,12 @@ set -eu
 set -o pipefail
 
 # Use this script base dir name and the project name
-PRJ_PATH="`dirname \"${BASH_SOURCE[0]}\"`"
+PRJ_PATH="`dirname \"${BASH_SOURCE[0]}\"`/.."
 PRJ_PATH="`( cd -P \"$PRJ_PATH\" && pwd )`"
 PRJ_NAME="`basename $PRJ_PATH`"
 
 cd $PRJ_PATH
 echo cd: \'`pwd`\'
 
-rm -r build
-rm -r dist
+rm -vr build
+rm -vr dist
