@@ -9,7 +9,5 @@ PRJ_PATH="`( cd -P \"$PRJ_PATH\" && pwd )`"
 PRJ_NAME="`basename $PRJ_PATH`"
 
 cd $PRJ_PATH
-echo cd: \'`pwd`\'
-
-rm -vr build
-rm -vr dist
+rm -vrf build
+rm -vrf dist
