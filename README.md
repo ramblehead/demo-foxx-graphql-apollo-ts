@@ -6,7 +6,7 @@ The GraphQL logic is implemented with [TypeScript](https://www.typescriptlang.or
 
 ## Installation
 
-It is assumed that node, npm, npx and zip are already installed. Current building scripts are implemented with bash and only tested on Linux with node 10.9.0 and npm/npx 6.2.0
+It is assumed that node, npm, npx and zip are already installed. Current building scripts are implemented with bash and only tested on Linux with node 10.9.0, npm 6.2.0 and npx 10.2.0
 
 To build zip package which could be installed as ArangoDB service, run the following commands:
 
